@@ -1,0 +1,19 @@
+{
+  "name": "datalake_webapp",
+  "version": "1.0.0",
+  "description": "Prototype Web App for Datalake",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Data-Lakee/REACT-APP.git"
+  },
+  "author": "Sai Raveendra Kandregula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Data-Lakee/REACT-APP/issues"
+  },
+  "homepage": "https://github.com/Data-Lakee/REACT-APP#readme"
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+  animation: fadeInAnimation ease-in 0.25s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.App {
+  max-height: 100vh;
+  z-index: -50;
+  overflow: hidden;
+}
+
+.App-header {
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(20px);
+  height: 7.5vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 10000;
+}
+
+
+.App-header a{
+  text-shadow: none;
+}
+
+.App-header a:hover{
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+#headerLogo{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#headerRightSidePane{
+  float: right;
+  font-size: 14px;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.NavbarItem{
+  margin-right: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.headerScrolled{
+  background: rgba(255,255,255,0.5);
+}
+
+.headerScrolled #headerLogo{
+  color: black;
+}
+
+.headerScrolled a{
+  color: black;
+  /*text-shadow: 0px 0px 20px rgba(0,0,0,1);*/
+}
+
+.headerScrolled a:hover{
+  text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}

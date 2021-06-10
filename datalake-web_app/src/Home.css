@@ -1,0 +1,271 @@
+#homeRoot {
+    position: relative;
+    max-height: 100vh;
+    overflow: scroll;
+    /*scroll-snap-type: mandatory;*/
+    scroll-snap-type: y mandatory;
+}
+
+span {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#homeBG0{
+    display: block;
+    height: 100%;
+    background-color: rgb(219, 219, 219);
+}
+
+#homeBG1Wrapper{
+    height: 100vh;
+    overflow: hidden;
+}
+
+#homeBG1 {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /*filter: drop-shadow(30px 5px 100px rgba(0, 0, 0, 0.75));
+    animation: changeColor infinite 20s;
+    -webkit-animation: changeColor infinite 20s;*/
+    fill: url(#G1);
+    /*filter: url(#f4)*/
+}
+
+#c1 {
+    animation: changeColor1 infinite 10s ease-in-out;
+    -webkit-animation: changeColor1 infinite 10s ease-in-out;
+    will-change: stop-color;
+}
+
+#c2 {
+    animation: changeColor2 infinite 10s ease-in-out;
+    -webkit-animation: changeColor2 infinite 10s ease-in-out;
+    will-change: stop-color;
+}
+
+#c3 {
+    animation: changeColor3 infinite 10s ease-in-out;
+    -webkit-animation: changeColor3 infinite 10s ease-in-out;
+    will-change: stop-color;
+}
+
+@-webkit-keyframes changeColor1 {
+    0% {
+        stop-color: #335AE4;
+    }
+    25% {
+        stop-color: #a238e9;
+    }
+    50% {
+        stop-color: #e4336b;
+    }
+    75% {
+        stop-color: #a238e9;
+    }
+    100% {
+        stop-color: #335AE4;
+    }
+}
+
+@keyframes changeColor1 {
+    0% {
+        stop-color: #335AE4;
+    }
+    25% {
+        stop-color: #a238e9;
+    }
+    50% {
+        stop-color: #e4336b;
+    }
+    75% {
+        stop-color: #a238e9;
+    }
+    100% {
+        stop-color: #335AE4;
+    }
+}
+
+@-webkit-keyframes changeColor2 {
+    0% {
+        stop-color: #a238e9;
+    }
+    25% {
+        stop-color: #e4336b;
+    }
+    50% {
+        stop-color: #335AE4;
+    }
+    75% {
+        stop-color: #e4336b;
+    }
+    100% {
+        stop-color: #a238e9;
+    }
+}
+
+@keyframes changeColor2 {
+    0% {
+        stop-color: #a238e9;
+    }
+    25% {
+        stop-color: #e4336b;
+    }
+    50% {
+        stop-color: #335AE4;
+    }
+    75% {
+        stop-color: #e4336b;
+    }
+    100% {
+        stop-color: #a238e9;
+    }
+}
+
+@-webkit-keyframes changeColor3 {
+    0% {
+        stop-color: #e4336b;
+    }
+    25% {
+        stop-color: #335AE4;
+    }
+    50% {
+        stop-color: #a238e9;
+    }
+    75% {
+        stop-color: #335AE4;
+    }
+    100% {
+        stop-color: #e4336b;
+    }
+}
+
+@keyframes changeColor3 {
+    0% {
+        stop-color: #e4336b;
+    }
+    25% {
+        stop-color: #335AE4;
+    }
+    50% {
+        stop-color: #a238e9;
+    }
+    75% {
+        stop-color: #335AE4;
+    }
+    100% {
+        stop-color: #e4336b;
+    }
+}
+
+#fieldOptions {
+    display: inline-block;
+    position: absolute;
+    right: 80px;
+    top: -90px;
+    transition: top ease 0.75s, right ease 0.75s, transform ease 0.75s;
+    color: black;
+    will-change: right;
+    will-change: top;
+    will-change: transform;
+    z-index: 100;
+}
+
+#ABCD {
+    position: absolute;
+    top: 50vh;
+    transform: translate(0, -50%);
+    left: 100px;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 10;
+    color: white;
+}
+
+/* Detect Mac Safari 6.1 or newer, hide any straggling Chrome references */
+
+@media not all and (min-resolution:.001dpcm) {
+    @media {
+        #c1 {
+            animation: none;
+            -webkit-animation: none;
+        }
+        #c2 {
+            animation: none;
+            -webkit-animation: none;
+        }
+        #c3 {
+            animation: none;
+            -webkit-animation: none;
+        }
+    }
+}
+
+#fieldOptionsContainer{
+    display: block;
+    height: 100vh;
+    position: relative;
+}
+
+.homeScrollChild{
+    scroll-snap-align: start;
+}
+
+#CDEF{
+    display: inline-block;
+    font-size: 40px;
+    min-width: none;
+    transition: min-width 0.5s;
+}
+
+
+.fieldOptionsAnimation #fieldOptions{
+    right: calc(50vw);
+    top: calc(50vh);
+    transform: translate(50%, -50%);    
+}
+
+.fieldOptionsAnimation #BCDE{
+    opacity: 0;
+    display: none;
+}
+
+.fieldOptionsAnimation #CDEF{
+    min-width: 400px;
+}
+
+.fieldOptionsAnimation .chevronButton{
+    display: inline-block;
+}
+
+.chevronButton{
+    height: 40px;
+    width: 40px;
+    outline: none;
+    border: none;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: none;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0px;
+}
+
+.chevronButton:hover{
+    color: #335AE4;
+}
+
+#fieldImage{
+    max-width: none;
+    max-height: none;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    height: 400px;
+    width: 500px;
+    object-fit: contain;
+    object-position: right;
+    z-index: 50;
+}
