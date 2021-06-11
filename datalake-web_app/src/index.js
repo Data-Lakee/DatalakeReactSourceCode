@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter, Switch } from 'react-router-dom'
+import { Route, BrowserRouter, Switch } from 'react-router-dom'
+import { createBrowserHistory } from "history";
 import './index.css';
 import './App.css'
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +9,8 @@ import Home from './Home';
 import Team from './Team';
 import AboutUs from './AboutUs';
 import Error404 from './Error404';
+
+const history = createBrowserHistory()
 
 const routs = (
   < BrowserRouter >
@@ -27,6 +30,14 @@ const routs = (
         <Route component={Error404} />
       </Switch>
     </div>
+    <button id="scrollToTopButton" onClick={()=>{
+        var path = history.location.pathname
+        if(path === '/'){
+          document.getElementById('homeRoot').scrollTo({top:0, left:0, behavior: 'smooth'})
+        }
+      }}>
+      &#8963;
+    </button>
   </ BrowserRouter >
 );
 ReactDOM.render(routs, document.getElementById('root'));

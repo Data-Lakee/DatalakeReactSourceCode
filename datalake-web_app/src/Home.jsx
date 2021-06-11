@@ -7,7 +7,6 @@ function Home() {
     const dataFieldList = ['Machine Learning', 'Computer Vision']
     const [dataField, setDataField] = useState(0)
     const dataImageList = [ML, CV]
-    const [dataImage, setDataImage] = useState(dataImageList[dataField])
 
     //vh = document.documentElement.clientHeight
 
@@ -15,9 +14,17 @@ function Home() {
         //console.log(document.documentElement.clientHeight)
         if (e.target.scrollTop > (document.documentElement.clientHeight * 0.1)) {
             document.getElementById('header').classList.add('headerScrolled')
+            document.getElementById('scrollToTopButton').style.opacity = 1
+            setTimeout(function(){ 
+                document.getElementById('scrollToTopButton').style.display = 'block'
+            }, 200);
         }
         else {
             document.getElementById('header').classList.remove('headerScrolled')
+            document.getElementById('scrollToTopButton').style.opacity = 0
+            setTimeout(function(){ 
+                document.getElementById('scrollToTopButton').style.display = 'none'
+            }, 200);
         }
         if (e.target.scrollTop > (document.documentElement.clientHeight / 2)) {
             document.getElementById('fieldOptionsContainer').classList.add('fieldOptionsAnimation')
@@ -28,21 +35,35 @@ function Home() {
     }
 
     function decrementFieldOption() {
-        if (dataField === 0) {
-            setDataField(dataFieldList.length - 1)
-        }
-        else {
-            setDataField(dataField - 1)
-        }
+        document.getElementById('CDEF').classList.add('fieldOptionsValueChange')
+        document.getElementById('fieldImage').classList.add('fieldOptionsValueChange')
+        setTimeout(function(){ 
+            if (dataField === 0) {
+                setDataField(dataFieldList.length - 1)
+            }
+            else {
+                setDataField(dataField - 1)
+            }
+            document.getElementById('CDEF').classList.remove('fieldOptionsValueChange')
+            document.getElementById('fieldImage').classList.remove('fieldOptionsValueChange')
+        }, 200);
+        
     }
 
     function incrementFieldOption() {
-        if (dataField === dataFieldList.length - 1) {
-            setDataField(0)
-        }
-        else {
-            setDataField(dataField + 1)
-        }
+        document.getElementById('CDEF').classList.add('fieldOptionsValueChange')
+        document.getElementById('fieldImage').classList.add('fieldOptionsValueChange')
+        setTimeout(function(){ 
+            if (dataField === dataFieldList.length - 1) {
+                setDataField(0)
+            }
+            else {
+                setDataField(dataField + 1)
+            }
+            document.getElementById('CDEF').classList.remove('fieldOptionsValueChange')
+            document.getElementById('fieldImage').classList.remove('fieldOptionsValueChange')
+        }, 200);
+        
     }
 
     return (
@@ -56,7 +77,7 @@ function Home() {
                     <defs>
                         <linearGradient id="G1" y2="100%">
                             <stop id="c1" offset="0%" stopColor="#335AE4" />
-                            <stop id="c2" offset="50%" stopColor="#a238e9" />
+                            <stop id="c2" offset="50%" stopColor="#A83FC0" />
                             <stop id="c3" offset="100%" stopColor="#e4336b" />
                         </linearGradient>
                     </defs>
@@ -83,7 +104,7 @@ function Home() {
                     </span>
                 </span>
                 
-                <img id="fieldImage" src={dataImageList[dataField]} />
+                <img id="fieldImage" draggable={false} src={dataImageList[dataField]} alt={dataFieldList[dataField]}/>
             </div>
         </div>
 

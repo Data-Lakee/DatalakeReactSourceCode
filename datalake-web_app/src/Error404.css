@@ -1,7 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 #pagenotfoundRoot{
-    background-color: black;
+    position: relative;
+    /*background-color: black;*/
+    /*background-image: radial-gradient(at top left , #3c3b3f, #3c3b40, #3c3a42, #3b3944, #393848, #36374c, #323651, #2d3655, #27355a, #20355d, #1b355f, #183560);*/
+    background: linear-gradient(135deg, #3c3b3f, #3a3842, #373545, #333148, #2f2e4b, #2b2d4e, #282c51, #252c54, #212d57, #1e2f5a, #1b325d, #183560);
+    backdrop-filter: blur(5px);
     min-height: 100vh;
     color: white;
     box-sizing: border-box;
     padding-top: 7.5vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+#Error404Message{
+    height: 50vh;
+    font-size: 32px;
+    font-weight: 600;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    max-height: 50vh;
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100vw;
+    line-height: 8.5vh;
+}
+
+#Error404Message>span{
+    display: block;
+    font-size: 20px;
+    padding-top: 10vh;
+}
+
+#Error404Message>span>a{
+    text-decoration: none;
+    font-style: oblique;
+    color: white;
+}
+
+#Error404Message>span>a:hover{
+    color: #97959e;
+}
+
+#Error404Image{
+    height: 50vh;
+    max-height: 50vh;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+#Error404Image>svg{
+    height: 100%;
+    fill: white;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.75));
 }

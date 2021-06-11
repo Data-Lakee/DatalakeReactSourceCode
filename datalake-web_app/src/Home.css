@@ -56,13 +56,13 @@ span {
         stop-color: #335AE4;
     }
     25% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     50% {
         stop-color: #e4336b;
     }
     75% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     100% {
         stop-color: #335AE4;
@@ -74,13 +74,13 @@ span {
         stop-color: #335AE4;
     }
     25% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     50% {
         stop-color: #e4336b;
     }
     75% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     100% {
         stop-color: #335AE4;
@@ -89,7 +89,7 @@ span {
 
 @-webkit-keyframes changeColor2 {
     0% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     25% {
         stop-color: #e4336b;
@@ -101,13 +101,13 @@ span {
         stop-color: #e4336b;
     }
     100% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
 }
 
 @keyframes changeColor2 {
     0% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     25% {
         stop-color: #e4336b;
@@ -119,7 +119,7 @@ span {
         stop-color: #e4336b;
     }
     100% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
 }
 
@@ -131,7 +131,7 @@ span {
         stop-color: #335AE4;
     }
     50% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     75% {
         stop-color: #335AE4;
@@ -149,7 +149,7 @@ span {
         stop-color: #335AE4;
     }
     50% {
-        stop-color: #a238e9;
+        stop-color: #A83FC0;
     }
     75% {
         stop-color: #335AE4;
@@ -217,6 +217,7 @@ span {
     font-size: 40px;
     min-width: none;
     transition: min-width 0.5s;
+    transition: opacity 200ms;
 }
 
 
@@ -268,4 +269,9 @@ span {
     object-fit: contain;
     object-position: right;
     z-index: 50;
+    transition: opacity 200ms;
+}
+
+.fieldOptionsValueChange{
+    opacity: 0;
 }
